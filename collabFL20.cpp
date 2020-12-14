@@ -25,6 +25,7 @@ void menu6Dominguez();
 void menu22Turcios();
 void menu21Tourkakis();
 void menu8Fuentes();
+void menu17Soepangat();
 
 // ***************************************************************
 // END OF FUNCTION PROTOTYPE AREA
@@ -92,6 +93,7 @@ int main()
             case 16:                 // Smith - call to function goes here
                 break;
             case 17:                 // Soepangat - call to function goes here
+                menu17Soepangat();
                 break;
             case 18:                 // Souhala - call to function goes here
                 break;
@@ -416,4 +418,49 @@ void menu8Fuentes()
     area = (pow(sidesLength, 2) * sidesNum) / (4 * tan(PI / sidesNum));     // Formula to calculate area
                                                                             // of polygon
     cout << "The area of your polygon is " << area << " square units" << endl;
+}
+
+// *****************************************************************************************
+// MENU ID:          17
+// FUNCTION:         menu17Soepangat
+// DESCRIPTION:      generates a random episode from the best TV series, The Office
+// OUTPUT EXAMPLE:   "Let's watch season 8, episode 2 of The Office tonight!"
+// *****************************************************************************************
+void menu17Soepangat()
+{
+    int season = 1 + rand() % 10;           // generates a random number between 1 and 9
+    int episode = 0;
+
+    switch (season) 
+    {
+        case 1:                             // season 1 has 6 episodes
+            episode = 1 + rand() % 7;
+            break;
+        case 2:                             // season 2 has 22 episodes
+            episode = 1 + rand() % 23;
+            break;
+        case 3:                             // season 3 has 25 episodes
+            episode = 1 + rand() % 26;      
+            break;
+        case 4:                             // season 4 has 19 episodes
+            episode = 1 + rand() % 20;
+            break;
+        case 5:                             // season 5 has 28 episodes
+            episode = 1 + rand() % 29;
+            break;
+        case 6:                             // season 6 has 26 episodes
+            episode = 1 + rand() % 27;
+            break;
+        case 7:                             // season 7 has 26 episodes
+            episode = 1 + rand() % 27;
+            break;
+        case 8:                             // season 8 has 24 episodes
+            episode = 1 + rand() % 25;
+            break;
+        case 9:                             // season 9 has 25 episodes
+            episode = 1 + rand() % 26;
+            break;
+    }
+
+    cout << "Let's watch season " << season << ", episode " << episode << " tonight!" << endl;
 }
